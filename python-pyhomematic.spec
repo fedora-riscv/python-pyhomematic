@@ -1,8 +1,8 @@
 %global pypi_name pyhomematic
 
 Name:           python-%{pypi_name}
-Version:        0.1.71
-Release:        4%{?dist}
+Version:        0.1.74
+Release:        1%{?dist}
 Summary:        Python Homematic interface
 
 License:        MIT
@@ -47,6 +47,9 @@ sed -i 's/\r$//' README.rst
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
 
 %changelog
+* Thu Aug 26 2021 Fabian Affolter <mail@fabian-affolter.ch> - 0.1.74-1
+- Update to latest upstream release 0.1.74 (closes rhbz#1938554)
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.71-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
