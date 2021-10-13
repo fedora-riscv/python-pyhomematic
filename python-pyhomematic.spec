@@ -1,7 +1,7 @@
 %global pypi_name pyhomematic
 
 Name:           python-%{pypi_name}
-Version:        0.1.74
+Version:        0.1.75
 Release:        1%{?dist}
 Summary:        Python Homematic interface
 
@@ -47,6 +47,9 @@ sed -i 's/\r$//' README.rst
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
 
 %changelog
+* Wed Oct 13 2021 Fabian Affolter <mail@fabian-affolter.ch> - 0.1.75-1
+- Update to latest upstream release 0.1.75 (closes rhbz#2010068)
+
 * Thu Aug 26 2021 Fabian Affolter <mail@fabian-affolter.ch> - 0.1.74-1
 - Update to latest upstream release 0.1.74 (closes rhbz#1938554)
 
