@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        0.1.77
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python Homematic interface
 
 License:        MIT
@@ -47,6 +47,9 @@ sed -i 's/\r$//' README.rst
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
 
 %changelog
+* Mon Jun 13 2022 Python Maint <python-maint@redhat.com> - 0.1.77-2
+- Rebuilt for Python 3.11
+
 * Sat Jan 22 2022 Fabian Affolter <mail@fabian-affolter.ch> - 0.1.77-1
 - Update to latest upstream release 0.1.77 (closes rhbz#2038740)
 
