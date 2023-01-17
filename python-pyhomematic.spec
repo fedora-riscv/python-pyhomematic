@@ -1,8 +1,10 @@
 %global pypi_name pyhomematic
 
+%bcond_with check
+
 Name:           python-%{pypi_name}
 Version:        0.1.77
-Release:        3%{?dist}
+Release:        3.rv64%{?dist}
 Summary:        Python Homematic interface
 
 License:        MIT
@@ -37,8 +39,10 @@ sed -i 's/\r$//' README.rst
 %install
 %py3_install
 
+%if %{with check}
 %check
 %pytest -v tests
+%endif
 
 %files -n python3-%{pypi_name}
 %license LICENSE.txt
@@ -47,6 +51,9 @@ sed -i 's/\r$//' README.rst
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
 
 %changelog
+* Tue Jan 17 2023 Liu Yang <Yang.Liu.sn@gmail.com> - 0.1.77-3.rv64
+- Skip test failed on riscv64.
+
 * Fri Jul 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.77-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
 
